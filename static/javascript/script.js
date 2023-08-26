@@ -56,13 +56,13 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
     timerDiv.addEventListener('click', () => {
       if (!isTimerRunning) {
         timerInterval = setInterval(updateTimer, 1000);
-        timerDiv.style.backgroundColor = '#80e27e';
+        timerDiv.style.backgroundColor = '#c7d7c0';
         statusElement.textContent = 'Click here to pause';
         updateTimer();
       } else {
         clearInterval(timerInterval);
         timerInterval = null;
-        timerDiv.style.backgroundColor = '#fd8a8a';
+        timerDiv.style.backgroundColor = '#e4abab';
         statusElement.textContent = 'Click here to resume';
       }
 
