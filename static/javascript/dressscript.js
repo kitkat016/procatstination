@@ -1,15 +1,10 @@
-const recentClothing = localStorage.getItem("currentClothing");
-    const characterClothing = document.getElementById("character_clothing");
+function selectCharacter(character) {
+  // Assuming you have an element with the ID "characterDisplay" on index.html
+  const characterDisplay = document.getElementById('characterDisplay');
 
-    if (recentClothing) {
-      characterClothing.src = recentClothing;
-    } else {
-      characterClothing.src = "images/default_girl.png";
-    }
-
-function change_dress(clothing) {
-    const character_clothing = document.getElementById("character_clothing");
-    character_clothing.src = clothing;
-    localStorage.setItem("currentClothing", clothing);
+  if (character === 'character1') {
+      characterDisplay.innerHTML = '<img src="character1.png" alt="Character 1">';
+  } else if (character === 'character2') {
+      characterDisplay.innerHTML = '<img src="character2.png" alt="Character 2">';
+  }
 }
-  

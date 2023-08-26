@@ -87,3 +87,23 @@ def home():
 @app.route("/strength")
 def strength():
     return render_template('strength.html')
+
+@app.route("/intelligence")
+def intelligence():
+    return render_template('intelligence.html')
+
+@app.route("/login")
+def login():
+    return render_template('login.html')
+
+@app.route("/signup")
+def signup():
+    return render_template('signup.html')
+
+@app.route("/dress")
+def dress():
+    return render_template('dress.html')
+
+@app.route("/cat")
+def cat():
+    return render_template('cat.html')

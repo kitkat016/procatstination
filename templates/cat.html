@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cat</title>
+    <link rel="stylesheet" href="/procatstination/static/css/catstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Gochi+Hand&family=Lunasima&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="background">
+    <div class="main_div">
+      <div class="left_dress">
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat1.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat1.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat2.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat2.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat3.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat3.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat4.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat4.png" />
+        </div>
+      </div>
+      <div class="right_dress" onclick="change_dress_2">
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat5.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat5.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat6.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat6.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat7.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat7.png" />
+        </div>
+        <div
+          class="cat_graph"
+          onclick="change_cat('/procatstination/static/images/cats/cat/cat8.png')"
+        >
+          <img src="/procatstination/static/images/cats/cat/cat8.png" />
+        </div>
+      </div>
+      <div class="cat">
+        <img alt="catdress" id="cat_clothing" />
+      </div>
+      <a href="{{ url_for('/') }}">
+        <div class="exit_button">
+          <img src="/procatstination/static/images/home_icon.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <script src="/procatstination/static/javascript/catscript.js"></script>
+  </body>
+</html>

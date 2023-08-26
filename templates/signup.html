@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/procatstination/static/css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Gochi+Hand&family=Lunasima&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="background">
+    <div class="main_div">
+      <div class="login_name">ProCATstination</div>
+      <div class="login_board">
+        <div class="login_part1">
+          <label for="uname" style="font-size: 20px"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+        </div>
+        <div class="login_part2">
+          <label for="psw" style="font-size: 20px"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+        </div>
+        <div class="login_signin">
+          <a href="{{ url_for('login') }}" style="color: rgb(151, 65, 118)">
+            back to log in
+          </a>
+        </div>
+        <div class="login_part3">
+          <a href="{{ url_for('home') }}">
+            <button type="submit">Sign up</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
