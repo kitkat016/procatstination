@@ -33,17 +33,18 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
 
     function updateTimer() {
       if (totalTime <= 0) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-        timerElement.textContent = '00:00'; // Show 00:00 when timer is done
-        statusElement.textContent = 'Timer finished!';
-        updatePoints(); // Add points when the timer finishes
-        setTimeout(resetTimer, 3000); // Reset the timer after 3 seconds
+          clearInterval(timerInterval);
+          timerInterval = null;
+          timerElement.textContent = '00:00'; // Show 00:00 when timer is done
+          statusElement.textContent = 'Timer finished!';
+          updatePoints(); // Add points when the timer finishes
+          document.querySelector('.exit_button').click(); // Click the button with class 'example'
+          setTimeout(resetTimer, 3000); // Reset the timer after 3 seconds
       } else {
-        timerElement.textContent = `00:${String(totalTime).padStart(2, '0')}`;
-        totalTime--;
+          timerElement.textContent = `00:${String(totalTime).padStart(2, '0')}`;
+          totalTime--;
       }
-    }
+  }
 
     function resetTimer() {
       timerElement.textContent = '10';

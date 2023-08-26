@@ -168,3 +168,37 @@
   height: 100%;
   border-radius: 50%;
 }
+
+.example {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.example:active {
+  background-color: black;
+}
+
+.pet_intelligence{
+  top:40%;
+  height: 80%;
+  width: 50%;
+  margin: auto;
+  left: 45%;
+  position: absolute;
+    }
+
+.pet_intelligence img {
+    width: 45%;
+    height: 45%;
+    object-fit: contain;
+    right: 100%;
+    overflow: hidden;
+    margin-left: -21px;
+    display: flex;
+      }
+
+.pet_intelligence img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease-out;
+        }

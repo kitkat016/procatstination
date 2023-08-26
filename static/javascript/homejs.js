@@ -1,4 +1,5 @@
-const recentClothing = document.getItem("currentClothing");
+
+const recentClothing = localStorage.getItem("currentClothing");
 
 if (recentClothing) {
   const characterClothing = document.getElementById("character_clothing");

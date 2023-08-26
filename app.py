@@ -92,6 +92,10 @@ def strength():
 def intelligence():
     return render_template('intelligence.html')
 
+@app.route("/wisdom")
+def wisdom():
+    return render_template('wisdom.html')
+
 @app.route("/login")
 def login():
     return render_template('login.html')
@@ -106,4 +110,5 @@ def dress():
 
 @app.route("/cat")
 def cat():
-    return render_template('cat.html')
+    return render_template('cat.html')\
+    

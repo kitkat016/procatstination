@@ -10,7 +10,7 @@
       type="text/css"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -35,8 +35,7 @@
           </a>
         </div>
         <div class="small_buttom_div" style="left: 40%">
-          <a href="{{ url_for('intelligence') }}"
-            >
+          <a href="{{ url_for('intelligence') }}">
             <img
               src="/procatstination/static/images/intelligence_icon.jpg"
               alt="intelligence_page"
@@ -45,7 +44,7 @@
           </a>
         </div>
         <div class="small_buttom_div" style="right: 0%">
-          
+          <a href="{{ url_for('wisdom') }}">
             <img
               src="/procatstination/static/images/mindfulness_icon.jpg"
               alt="dress_page"
@@ -57,8 +56,10 @@
 
       <div class="character" id="characterDisplay">
         <img
-          src="/procatstination/static/images/default_girl.png"
+          src="/procatstination/static/images/girl/girl/default_girl.png"
           alt="the character image"
+          id="character_clothing"
+        />
         />
       </div>
 
