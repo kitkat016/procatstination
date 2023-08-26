@@ -13,6 +13,8 @@ my_cursor = mydb.cursor()
 
 #my_cursor.execute("CREATE DATABASE characters")
 
-my_cursor.execute("SHOW DATABASES")
-for db in my_cursor:
-    print(db)
+my_cursor.execute("")
+
+# my_cursor.execute("SHOW DATABASES")
+# for db in my_cursor:
+#     print(db)
