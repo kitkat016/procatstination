@@ -1,0 +1,212 @@
+.background{
+  background-image: url('/procatstination/static/images/afternoon_background.jpg');
+  background-size: cover;
+  padding: 0;
+  height:100%;
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+}
+
+.main_div{
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  margin: auto 0;
+  position: absolute;
+}
+
+.big_buttom_div {
+  height: 150px;
+  top: 80%;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.small_buttom_div {
+  height: 90%;
+  width: 20%;
+  position: absolute;
+  border-radius: 40px;    
+}
+
+.small_buttom_div:hover{
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+  box-shadow: 10px 10px 10px rgb(255, 255, 255, 0.6);
+  transition: shadow 0.5s;
+}
+
+.character {
+  top:200px;
+  height: 400px;
+  width: 250px;
+  margin: auto;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  right: 100%;
+  overflow: hidden;
+  margin-left: -21px;
+}
+.character img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease-out;
+}
+
+.stat {
+  background-color: #DFEBEB;
+  border-radius: 40px;
+  width: 22%;
+  height: 68%;
+  left: -30px;
+  bottom: 150px;
+  position: absolute;
+  padding-left: 35px;
+}
+
+.stat_small {
+  width: 80%;
+  height: 100%;
+  
+}
+
+.change_dress {
+  background-color: #fd8a8a;
+  height: 100px;
+  width: 300px;
+  top: 225px;
+  right: 100px;
+  position: absolute;
+  border-radius: 40px;
+}
+
+.change_dress:hover{
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+  box-shadow: 10px 10px 10px rgb(255, 255, 255, 0.6);
+  transition: shadow 0.5s ease-in;
+  cursor: pointer;
+}
+
+.pet {
+  background-color: #fd8a8a;
+  height: 100px;
+  width: 300px;
+  top: 375px;
+  right: 100px;
+  position: absolute;
+  border-radius: 40px;
+}
+
+.pet:hover{
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+  box-shadow: 10px 10px 10px rgb(255, 255, 255, 0.6);
+  transition: shadow 0.5s;
+  cursor: pointer;
+}
+
+@property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.pie {
+  --p:20;
+  --b:22px;
+  --c:darkred;
+  --w:150px;
+  
+  width:var(--w);
+  aspect-ratio:1;
+  position:relative;
+  display:inline-grid;
+  margin:5px;
+  place-content:center;
+  font-size:25px;
+  font-weight:bold;
+  font-family:sans-serif;
+}
+.pie:before,
+.pie:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.pie:before {
+  inset:0;
+  background:
+    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+  inset:calc(50% - var(--b)/2);
+  background:var(--c);
+  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+.animate {
+  animation:p 1s .5s both;
+}
+.no-round:before {
+  background-size:0 0,auto;
+}
+.no-round:after {
+  content:none;
+}
+@keyframes p {
+  from{--p:0}
+}
+
+.first_text {
+  position:absolute;
+  right: 38px;
+  top: 65px;
+  font-size:30px;
+  font-family: 'Gochi Hand';
+  color: rgb(0, 0, 0);
+  opacity: 1;
+
+}
+.first_text:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+}
+
+.second_text {
+  position:absolute;
+  right: 6px;
+  top: 225px;
+  font-size: 30px;
+  font-family: 'Gochi Hand';
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.second_text:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+}
+
+.third_text {
+  position:absolute;
+  right: 45px;
+  top: 385px;
+  font-size: 30px;
+  font-family: 'Gochi Hand';
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.third_text:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+}

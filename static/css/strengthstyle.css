@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'howlimit'; /* Choose a name for your font */
+    src: url('fonts/howlimit/Howlimit.otf') format('otf'), /* Add different formats if available */
+         url('fonts/howlimit/Howlimit.ttf') format('ttf');
+    /* Add more formats if you have them */
+  }
+
+.main_div{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin: auto 0;
+    position: absolute;
+  }
+  .background{
+    background-image: url('/procatstination/static/images/night_background.jpg');
+    background-size: cover;
+    padding: 0;
+    height:100%;
+    margin: 0;
+    position: fixed;
+    overflow: hidden;
+  }
+.timer-div{
+    
+    position: fixed;
+    right: 80px;
+    bottom: 60px;
+    height: 280px;
+    width: 280px;
+    background-color: rgb(223,235,235, 0.6);
+    border-radius: 80px;
+    
+}
+
+
+.status{
+    text-align: center;
+    margin-top: 10px;
+    color: #898ccc;
+    font-family: 'Cute Font', cursive;
+    font-size: 28px;
+}
+.timer-div:hover{
+    box-shadow: 5px 5px 5px rgb(223,235,235, 0.6);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.8s, shadow 0.8s;
+}
+
+.timer{
+    margin-top: 60px;
+    font-size: 84px;
+    font-family: 'Cute Font', cursive;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #c67b69;
+    opacity: 1;
+}
+
+.points{
+    font-family: 'Cute Font', cursive;
+    font-size: 24px;
+    position: fixed;
+}
+.chart-container{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    height: 300px;
+    width: 300px;
+}
+#pointsChart .chartjs-legend ul li span {
+    color: white;
+
+  }
+  
+.points{
+    opacity: 0;
+}
+  
+  
+.stat {
+    background-color: #DFEBEB;
+    border-radius: 40px;
+    width: 25%;
+    height: 68%;
+    left: -30px;
+    bottom: 150px;
+    position: absolute;
+    padding-left: 35px;
+  }
+  
+.stat_small {
+    width: 80%;
+    height: 100%;
+    
+  }
+  
+.character {
+    top: 500px;
+    height: 400px;
+    width: 250px;
+    margin: auto;
+  }
+  
+.character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    right: 100%;
+    overflow: hidden;
+    margin-left: -21px;
+  }
+.character img:hover{
+    transform: scale(1.3);
+    transition: transform 0.3s ease-out;
+  }
