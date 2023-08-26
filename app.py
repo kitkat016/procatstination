@@ -111,4 +111,15 @@ def dress():
 @app.route("/cat")
 def cat():
     return render_template('cat.html')
-    
+
+@app.route("/buffcat")
+def buffcat():
+    return render_template('buffcat.html')
+
+@app.route("/bigbraincat")
+def bigbraincat():
+    return render_template('intelligencecat.html')
+
+@app.route("/wisdomcat")
+def wisdomcat():
+    return render_template('wisdomcat.html')

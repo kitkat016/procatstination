@@ -14,59 +14,47 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strength</title>
+    <title>BIgbrain Cat</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Lunasima&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="/procatstination/static/css/strengthstyle.css"
-    />
+    <link rel="stylesheet" href="/procatstination/static/css/buffcat.css" />
     <script src="/procatstination/static/javascript/strength.js"></script>
   </head>
   <body class="background">
     <div class="main_div">
       <div class="stat">
         <div class="stat_small">
-          <div class="chart-container">
-            <canvas id="pointsChart"></canvas>
-            <div class="info">
-              Click on the green box to start the timer! You get 10 points for
-              ever 30 minutes you workout.
-            </div>
+          <div class="info-bigbrain">
+            Big Brain Cat. Also know as Intelligence Cat, this feline is like
+            the Einstein of the cat world. They've built elaborate contraptions
+            to catch treats, designed complex escape routes from pesky dogs, and
+            even hacked into the neighbor's Wi-Fi to stream endless hours of
+            bird videos. Big Brain Cat's mind is a maze of brilliance, and
+            they're not afraid to use it to outsmart any challenge that comes
+            their way. So there you have it, my friend!
           </div>
         </div>
       </div>
-      <a href="{{ url_for('buffcat') }}">
-        <div class="pet">
-          <img
-            src="/procatstination/static/images/buff_cat.png"
-            alt="buff cat"
-          />
-        </div>
-      </a>
-      <div class="character">
-        <img src="/procatstination/static/images/girl/girl/exercise_girl.png" />
+      <div class="pet-bigbrain">
+        <img
+          src="/procatstination/static/images/cats/cat/cat3.png"
+          alt="bigbrain cat"
+        />
       </div>
-      <a href="{{ url_for('home') }}">
+
+      <a href="{{ url_for('intelligence') }}">
         <div class="exit_button">
           <img
             class="home-button"
-            src="/procatstination/static/images/home_icon.png"
+            src="/procatstination/static/images/back-icon.png"
             alt="home screen"
           />
         </div>
       </a>
 
       <div class="points">Strength: <span id="points">0</span></div>
-      <div class="timer-div">
-        <div class="timer">30:00</div>
-        <div class="status">Click here to start</div>
-      </div>
-      <div class="chart-container">
-        <canvas id="pointsChart"></canvas>
-      </div>
       <div class="points">Strength: <span id="points">0</span></div>
       <script src="/procatstination/static/javascript/script.js"></script>
     </div>

@@ -98,43 +98,20 @@
     height: 100%;
     
   }
-  
-.character {
-  top:20%;
-  height: 60%;
-  width: 20%;
-  margin: auto;
-  left: 30%;
-  position: absolute;
-  }
-  
-.character img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  right: 0%;
-  overflow: hidden;
-  margin-left: -15px;
-  display: flex;
-  
-  }
-.character img:hover{
-  transform: scale(1.3);
-  transition: transform 0.3s ease-out;
-  }
 
 .pet {
-  top:35%;
-  height: 60%;
-  width: 40%;
+  top:20%;
+  height: 80%;
+  width: 60%;
   margin: auto;
-  left: 40%;
+  left: 20%;
   position: absolute;
+  
     }
 
 .pet img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     right: 100%;
     overflow: hidden;
@@ -148,9 +125,11 @@
         }
 
 .info{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  bottom: 20%;
+  font-family: 'Gochi Hand';
+  font-size: 28px;
+  top:10%;
+  margin-left: 3%;
+  margin-top: 6%;
   text-align: center;
 }
 .exit_button {
@@ -195,7 +174,7 @@
     object-fit: contain;
     right: 100%;
     overflow: hidden;
-    margin-left: 10px;
+    margin-left: -21px;
     display: flex;
       }
 
@@ -203,3 +182,72 @@
   transform: scale(1.3);
   transition: transform 0.3s ease-out;
         }
+
+.info-bigbrain {
+        font-family: 'Gochi Hand';
+        font-size: 25px;
+        top:10%;
+        margin-left: 3%;
+        margin-top: 6%;
+        text-align: center;
+
+} 
+.pet-bigbrain{
+    top:20%;
+    height: 60%;
+    width: 40%;
+    margin: auto;
+    left: 35%;
+    position: absolute;
+
+      }
+  
+.pet-bigbrain img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      right: 100%;
+      overflow: hidden;
+      margin-left: -21px;
+      display: flex;
+        }
+
+.pet-bigbrain img:hover{
+    transform: scale(1.3);
+    transition: transform 0.3s ease-out;
+          }
+
+.info-wisdom {
+    font-family: 'Gochi Hand';
+    font-size: 27px;
+    top:10%;
+    margin-left: 3%;
+    margin-top: 6%;
+    text-align: center;
+
+}
+
+.pet-wisdom{
+  top:20%;
+  height: 70%;
+  width: 50%;
+  margin: auto;
+  left: 27%;
+  position: absolute;
+    
+      }
+  
+.pet-wisdom img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    right: 100%;
+    overflow: hidden;
+    margin-left: -21px;
+    display: flex;
+        }
+
+.pet-wisdom img:hover{
+    transform: scale(1.3);
+    transition: transform 0.3s ease-out;
+          }

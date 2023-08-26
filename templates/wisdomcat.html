@@ -14,59 +14,46 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strength</title>
+    <title>WisdomCat</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Lunasima&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="/procatstination/static/css/strengthstyle.css"
-    />
+    <link rel="stylesheet" href="/procatstination/static/css/buffcat.css" />
     <script src="/procatstination/static/javascript/strength.js"></script>
   </head>
   <body class="background">
     <div class="main_div">
       <div class="stat">
         <div class="stat_small">
-          <div class="chart-container">
-            <canvas id="pointsChart"></canvas>
-            <div class="info">
-              Click on the green box to start the timer! You get 10 points for
-              ever 30 minutes you workout.
-            </div>
+          <div class="info-wisdom">
+            Wisdom Cat is the wise sage of the group. Imagine a cat wearing tiny
+            glasses and reading books about quantum physics. Yeah, that's Wisdom
+            Cat for ya. They've got all the answers to life's deepest mysteries,
+            like why the red dot can never be caught and where all those missing
+            socks go. Plus, they give the best advice, even if it's mostly about
+            the proper technique for grooming.
           </div>
         </div>
       </div>
-      <a href="{{ url_for('buffcat') }}">
-        <div class="pet">
-          <img
-            src="/procatstination/static/images/buff_cat.png"
-            alt="buff cat"
-          />
-        </div>
-      </a>
-      <div class="character">
-        <img src="/procatstination/static/images/girl/girl/exercise_girl.png" />
+      <div class="pet-wisdom">
+        <img
+          src="/procatstination/static/images/cats/cat/cat4.png"
+          alt="buff cat"
+        />
       </div>
-      <a href="{{ url_for('home') }}">
+
+      <a href="{{ url_for('wisdom') }}">
         <div class="exit_button">
           <img
             class="home-button"
-            src="/procatstination/static/images/home_icon.png"
+            src="/procatstination/static/images/back-icon.png"
             alt="home screen"
           />
         </div>
       </a>
 
       <div class="points">Strength: <span id="points">0</span></div>
-      <div class="timer-div">
-        <div class="timer">30:00</div>
-        <div class="status">Click here to start</div>
-      </div>
-      <div class="chart-container">
-        <canvas id="pointsChart"></canvas>
-      </div>
       <div class="points">Strength: <span id="points">0</span></div>
       <script src="/procatstination/static/javascript/script.js"></script>
     </div>
