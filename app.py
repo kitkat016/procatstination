@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash
+from flask import Flask, render_template, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
@@ -10,7 +10,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = "key"
 
 # Initialise The Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///character.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///character.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Spider7@localhost/characters'
 db = SQLAlchemy(app)
 
 # Create Database Model
@@ -24,14 +25,12 @@ class Character(db.Model):
 # Create a Form Class
 class UserCharacter(FlaskForm):
     name = StringField("name", validators=[DataRequired()])
-    strength_stat = IntegerField("strength", validators=[DataRequired()])
-    intelligence_stat = IntegerField("intelligence", validators=[DataRequired()])
-    wisdom_stat = IntegerField("wisdom", validators=[DataRequired()])
 
 # Function to return a string when something is added to the database
 def __repr__(self):
     return '<Name %r>' % self.id
 
+# Adding to the Database
 @app.route("/character/add", methods=['GET', 'POST'])
 def add_user():
     name = None
@@ -50,6 +49,34 @@ def add_user():
                            character=character,
                            name=name,
                            my_character=my_character)
+
+#Updating the Database
+@app.route("/update/<int:id>", methods=['GET', 'POST'])
+def update(id):
+    character = UserCharacter()
+    character_to_update = Character.query.get_or_404(id)
+    if request.method == "POST":
+        character_to_update.name = request.form['name']
+        character_to_update.strength_stat = request.form['strength']
+        character_to_update.intelligence_stat = request.form['intelligence']
+        character_to_update.wisdom_stat = request.form['wisdom']
+        try:
+            db.session.commit()
+            flash('Character updated successfully')
+            return render_template('update.html',
+                                   character = character,
+                                   character_to_update = character_to_update)
+        except:
+            db.session.commit()
+            flash('An error occured updating')
+            return render_template('update.html',
+                                   character = character,
+                                   character_to_update = character_to_update)
+    else:
+        return render_template('update.html',
+                                   character = character,
+                                   character_to_update = character_to_update)
+
 
 @app.route("/")
 
