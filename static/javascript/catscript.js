@@ -1,15 +1,15 @@
-const recentCat = localStorage.getItem("currentCat");
-    const cat_clothing = document.getElementById("cat_clothing");
+const recentPet = localStorage.getItem("currentPet");
+    const characterPet = document.getElementById("character_pet");
 
-    if (recentCat) {
-        cat_clothing.src = recentCat;
+    if (recentPet) {
+      characterPet.src = recentPet;
     } else {
-        cat_clothing.src = "/procatstination/static/images/cats/cat/cat1.png";
+      characterPet.src = "/procatstination/static/images/cats/cat/cat1.png";
     }
 
-function change_cat(cat) {
-    const cat_clothing = document.getElementById("cat_clothing");
-    cat_clothing.src = cat;
-    localStorage.setItem("currentCat", cat);
+function change_pet(pet) {
+    const character_pet = document.getElementById("character_pet");
+    character_pet.src = pet;
+    localStorage.setItem("currentPet", pet);
 }
   

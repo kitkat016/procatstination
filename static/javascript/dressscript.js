@@ -11,5 +11,4 @@ function change_dress(clothing) {
     const character_clothing = document.getElementById("character_clothing");
     character_clothing.src = clothing;
     localStorage.setItem("currentClothing", clothing);
-    
 }

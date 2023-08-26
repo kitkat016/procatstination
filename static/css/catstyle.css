@@ -46,6 +46,13 @@
   position: absolute;
 }
 
+.cat img{
+  height: 95%;
+  width: 95%;
+  left: 0%;
+  top: 20%;
+  position: absolute;
+}
 .cat:hover {
   transform: scale(1.15);
   transition: transform 0.3s ease-out;
@@ -63,6 +70,13 @@
   left: 2%;
   background-color: black;
   position: absolute;
+  border-radius: 50%;
+}
+.exit_button img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .cat_graph {
