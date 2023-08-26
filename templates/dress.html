@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cat</title>
+    <link rel="stylesheet" href="/procatstination/static/css/dressstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Gochi+Hand&family=Lunasima&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="background">
+    <div class="main_div">
+      <div class="left_dress">
+        <div
+          class="dress_graph"
+          onclick="change_dress('images/default_girl.png')"
+        >
+          <img src="images/default_girl.png" />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/exercise_girl.png"
+            onclick="change_dress('images/exercise_girl.png')"
+          />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/mindful_girl.png"
+            onclick="change_dress('images/mindful_girl.png')"
+          />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/study_girl.png"
+            onclick="change_dress('images/study_girl.png')"
+          />
+        </div>
+      </div>
+      <div class="right_dress" onclick="change_dress_2">
+        <div class="dress_graph">
+          <img
+            src="images/default_boy.png"
+            onclick="change_dress('images/default_boy.png')"
+          />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/exercise_boy.png"
+            onclick="change_dress('images/exercise_boy.png')"
+          />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/mindful_boy.png"
+            onclick="change_dress('images/mindful_boy.png')"
+          />
+        </div>
+        <div class="dress_graph">
+          <img
+            src="images/study_boy.png"
+            onclick="change_dress('images/study_boy.png')"
+          />
+        </div>
+      </div>
+      <div class="character">
+        <img alt="characterdress" id="character_clothing" />
+      </div>
+      <a href="index.html">
+        <div class="exit_button">back to</div>
+      </a>
+    </div>
+    <script src="/procatstination/static/javascript/dressscript.js"></script>
+  </body>
+</html>

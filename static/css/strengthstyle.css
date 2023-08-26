@@ -25,26 +25,25 @@
 .timer-div{
     
     position: fixed;
-    right: 80px;
-    bottom: 60px;
+    right: 150px;
+    bottom: 150px;
     height: 280px;
     width: 280px;
-    background-color: rgb(223,235,235, 0.6);
+    background-color: rgb(223,235,235, 0.7);
     border-radius: 80px;
     
 }
-
 
 .status{
     text-align: center;
     margin-top: 10px;
     color: #898ccc;
-    font-family: 'Cute Font', cursive;
+    font-family: 'Gochi Hand', cursive;
     font-size: 28px;
 }
 .timer-div:hover{
     box-shadow: 5px 5px 5px rgb(223,235,235, 0.6);
-    opacity: 0.4;
+    transform: scale(1.5);
     cursor: pointer;
     transition: opacity 0.8s, shadow 0.8s;
 }
@@ -52,7 +51,7 @@
 .timer{
     margin-top: 60px;
     font-size: 84px;
-    font-family: 'Cute Font', cursive;
+    font-family: 'Gochi Hand', cursive;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -101,21 +100,55 @@
   }
   
 .character {
-    top: 500px;
-    height: 400px;
-    width: 250px;
-    margin: auto;
+  top:20%;
+  height: 60%;
+  width: 30%;
+  margin: auto;
+  left: 30%;
+  position: absolute;
   }
   
 .character img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  right: 100%;
+  overflow: hidden;
+  margin-left: -21px;
+  display: flex;
+  }
+.character img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease-out;
+  }
+
+.pet {
+  top:40%;
+  height: 50%;
+  width: 30%;
+  margin: auto;
+  left: 45%;
+  position: absolute;
+    }
+
+.pet img {
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     right: 100%;
     overflow: hidden;
     margin-left: -21px;
-  }
-.character img:hover{
-    transform: scale(1.3);
-    transition: transform 0.3s ease-out;
-  }
+    display: flex;
+      }
+
+.pet img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease-out;
+        }
+
+.info{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  bottom: 20%;
+  text-align: center;
+}

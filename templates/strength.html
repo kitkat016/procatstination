@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Gochi+Hand&family=Lunasima&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strength</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Lunasima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/procatstination/static/css/strengthstyle.css" />
-</head>
-<body class="background">
-  <div class="main_div">
-  
-     <div class="stat">
-      <div class="stat_small">
-        <div class="chart-container">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Lunasima&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/procatstination/static/css/strengthstyle.css"
+    />
+  </head>
+  <body class="background">
+    <div class="main_div">
+      <div class="stat">
+        <div class="stat_small">
+          <div class="chart-container">
             <canvas id="pointsChart"></canvas>
-        </div>
-        <div class="character">
-          <img
-            src="/procatstination/static/images/default_girl.png"
-            alt="the character image"/>
-        </div>
-        <div class="points">
-            Strength: <span id="points">0</span>
+            <div class="info">
+              Click on the green box to start the timer! You get 10 points for
+              ever 60 minutes you workout.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="timer-div">
+      <div class="pet">
+        <img src="/procatstination/static/images/buff_cat.png" alt="buff cat" />
+      </div>
+      <div class="character">
+        <img
+          src="/procatstination/static/images/exercise_girl.png"
+          alt="the character image"
+        />
+      </div>
+
+      <div class="points">Strength: <span id="points">0</span></div>
+      <div class="timer-div">
         <div class="timer">60:00</div>
         <div class="status">Click here to start</div>
-            
-    </div>
-    <div class="chart-container">
+      </div>
+      <div class="chart-container">
         <canvas id="pointsChart"></canvas>
       </div>
-    <div class="points">
-        Strength: <span id="points">0</span>
-      </div>
-    <script src="/procatstination/static/javascript/script.js"></script>   
-  </div>
-      
-
-
-</body>
-    
-</body>
+      <div class="points">Strength: <span id="points">0</span></div>
+      <script src="/procatstination/static/javascript/script.js"></script>
+    </div>
+  </body>
 </html>

@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cat</title>
-    <link rel="stylesheet" href="/procatstination//static/css/style.css" />
+    <title>ProCATstination</title>
+    <link
+      rel="stylesheet"
+      ,
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static',filename='javascript/homejs.js')}}"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -20,25 +29,25 @@
     <div class="main_div">
       <div class="big_buttom_div">
         <div class="small_buttom_div" style="left: 0%">
-          <a href="strength.html">
+          <a href="{{ url_for('strength') }}">
             <img
               src="/procatstination/static/images/strength_icon.jpg"
-              alt="dress_page"
+              alt="strength_page"
               style="width: 100%; height: 100%; border-radius: 40px"
             />
           </a>
         </div>
         <div class="small_buttom_div" style="left: 40%">
-          <a href="dress.html">
+          <a href="/procatstination/templates/intelligence.html">
             <img
               src="/procatstination/static/images/intelligence_icon.jpg"
-              alt="dress_page"
+              alt="intelligence_page"
               style="width: 100%; height: 100%; border-radius: 40px"
             />
           </a>
         </div>
         <div class="small_buttom_div" style="right: 0%">
-          <a href="dress.html">
+          <a href="/procatstination/templates/mindfulness.html">
             <img
               src="/procatstination/static/images/mindfulness_icon.jpg"
               alt="dress_page"
@@ -67,7 +76,7 @@
       </div>
 
       <div class="change_dress">
-        <a href="dress.html">
+        <a href="/procatstination/templates/dress.html">
           <img
             src="/procatstination/static/images/change_character.jpg"
             alt="dress_page"
@@ -77,7 +86,7 @@
       </div>
 
       <div class="pet">
-        <a href="pet.html">
+        <a href="/procatstination/templates/pet.html">
           <img
             src="/procatstination/static/images/change_cat.jpg"
             alt="dress_page"

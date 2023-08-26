@@ -6,8 +6,10 @@ from wtforms import StringField, IntegerField
 from wtforms.validators import DataRequired
 
 # Initialse The App
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/procatstination/static')
 app.config['SECRET_KEY'] = "key"
+app.debug = True
+
 
 # Initialise The Database
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///character.db'
@@ -79,6 +81,9 @@ def update(id):
 
 
 @app.route("/")
-
 def home():
-    return "Testing"
+    return render_template('index.html')
+
+@app.route("/strength")
+def strength():
+    return render_template('strength.html')
