@@ -34,6 +34,7 @@
           <form method="post" action="{{ url_for('strength') }}">
             <input type="hidden" name="username" value="{{ my_character.username }}">
             <input type="hidden" name="password" value="{{ my_character.password }}">
+            <input type="hidden" name="page" value="strength">
             <button type="submit" class="image-button">
               <img
               src="/procatstination/static/images/strength_icon.jpg"
@@ -45,20 +46,22 @@
         </div>
         <div class="small_buttom_div" style="left: 40%">
           <a href="{{ url_for('intelligence') }}">
-            <img
+                          <img
               src="/procatstination/static/images/intelligence_icon.jpg"
               alt="intelligence_page"
               style="width: 100%; height: 100%; border-radius: 40px"
             />
+            </button>
           </a>
         </div>
         <div class="small_buttom_div" style="right: 0%">
           <a href="{{ url_for('wisdom') }}">
-            <img
+                          <img
               src="/procatstination/static/images/mindfulness_icon.jpg"
-              alt="dress_page"
+              alt="wisdom_page"
               style="width: 100%; height: 100%; border-radius: 40px"
             />
+            </button>
           </a>
         </div>
       </div>
