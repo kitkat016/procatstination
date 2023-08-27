@@ -25,10 +25,8 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
     let points = 0; // Initial points
 
     function updatePoints() {
-      points += 10; // Increase points by 10
-      pointsSpan.textContent = points; // Update the points display
-      pointsChart.data.datasets[0].data = [points, 100 - points];
-      pointsChart.update(); // Update the chart
+      console.log("Gabagoo")
+      document.getElementById("thebutton").click();
     }
 
     function updateTimer() {
@@ -55,7 +53,7 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
 
     timerDiv.addEventListener('click', () => {
       if (!isTimerRunning) {
-        timerInterval = setInterval(updateTimer, 1000);
+        timerInterval = setInterval(updateTimer, 10);
         timerDiv.style.backgroundColor = '#c7d7c0';
         statusElement.textContent = 'Click here to pause';
         updateTimer();

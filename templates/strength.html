@@ -58,5 +58,11 @@
       <div class="points">Strength: <span id="points">0</span></div>
       <script src="/procatstination/static/javascript/script.js"></script>
     </div>
+    <form method="post" action="{{ url_for('strength_updated') }}">
+      <input type="hidden" name="character" value="{{ my_character.username }}">
+      <input type="hidden" name="character" value="{{ my_character.password }}">
+      <btn class="hidden=btn" id='thebutton' style="opacity: 0; border: 0px;">
+      </btn>
+    </form>
   </body>
 </html>

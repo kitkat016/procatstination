@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request, g, session, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
@@ -17,46 +17,27 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Spider7@localhost/
 db = SQLAlchemy(app)
 
 # Create Database Model
-class Character(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), nullable=False)
+class User(db.Model):
+    username = db.Column(db.String(20), primary_key=True)
+    password = db.Column(db.String(20), primary_key=True)
     strength_stat = db.Column(db.Integer, nullable=False, default=0)
     intelligence_stat = db.Column(db.Integer, nullable=False, default=0)
     wisdom_stat = db.Column(db.Integer, nullable=False, default=0)
 
 # Create a Form Class
-class UserCharacter(FlaskForm):
-    name = StringField("name", validators=[DataRequired()])
+class UserForm(FlaskForm):
+    username = StringField("username", validators=[DataRequired()])
+    password = StringField("password", validators=[DataRequired()])
 
 # Function to return a string when something is added to the database
 def __repr__(self):
     return '<Name %r>' % self.id
 
-# Adding to the Database
-@app.route("/character/add", methods=['GET', 'POST'])
-def add_user():
-    name = None
-    character = UserCharacter()
-    if character.validate_on_submit():
-        user = Character.query.filter_by(id=character.id.data).first()
-        if user is None:
-            user = Character(name=character.name.data)
-            db.session.add(user)
-            db.session.commit()
-        name = character.name.data
-        character.name.data = ''
-        flash("Character Created Successfully")
-    my_character = Character.query.filter_by(id=character.id.data)
-    return render_template("add_character.html",
-                           character=character,
-                           name=name,
-                           my_character=my_character)
-
 #Updating the Database
 @app.route("/update/<int:id>", methods=['GET', 'POST'])
 def update(id):
-    character = UserCharacter()
-    character_to_update = Character.query.get_or_404(id)
+    character = UserForm()
+    character_to_update = User.query.get_or_404(id)
     if request.method == "POST":
         character_to_update.name = request.form['name']
         character_to_update.strength_stat = request.form['strength']
@@ -76,14 +57,56 @@ def update(id):
                                    character_to_update = character_to_update)
     else:
         return render_template('update.html',
-                                   character = character,
-                                   character_to_update = character_to_update)
+                                character = character,
+                                character_to_update = character_to_update)
 
 
 @app.route("/")
 def home():
+    return render_template('login.html',
+                           form=UserForm())
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    character = UserForm()
+    if character.validate_on_submit():
+        new_username = character.username.data
+        new_password = character.password.data
+        my_character = User.query.filter_by(username=character.username.data,
+                                             password=character.password.data).first()
+        if my_character is None:
+            new_character = User(username=new_username,
+                                    password=new_password)
+            db.session.add(new_character)
+            db.session.commit()           
+    my_character = User.query.filter_by(username=character.username.data,
+                                             password=character.password.data).first()
+    return render_template("index.html", my_character=my_character)
+
+@app.route("/index")
+def index():
     return render_template('index.html')
 
-@app.route("/strength")
+@app.route("/strength", methods=['GET', 'POST'])
 def strength():
+    character = UserForm
+    username = character.username.data
+    password = character.password.data
+    my_character = my_character = User.query.filter_by(username=username,
+                                             password=password).first()
+    return render_template('strength.html', my_chararacter = my_character)
+
+@app.route("/strength_update", methods=['GET','POST'])
+def strength_updated():
+    print("bingo")
+    character = UserForm()
+    username = character.username.data
+    password = character.password.data
+    character_to_update = User.query.get_or_404(username, password)
+    character_to_update.strength_stat += 1
+    try:
+        db.session.commit()
+        flash('Character updated successfully')
+    except:
+        flash('An error occured updating')
     return render_template('strength.html')

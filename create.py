@@ -6,13 +6,16 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd='Spider7'
+    passwd='Spider7',
+    database='characters'
 )
 
 my_cursor = mydb.cursor()
 
-#my_cursor.execute("CREATE DATABASE characters")
 
-my_cursor.execute("SHOW DATABASES")
-for db in my_cursor:
-    print(db)
+my_cursor.execute("SELECT * FROM user")
+
+my_result = my_cursor.fetchall()
+
+for x in my_result:
+    print(x)
