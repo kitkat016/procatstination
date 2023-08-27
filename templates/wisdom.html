@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <div class="form">
+      <form name="theForm" method="post" action="{{ url_for('wisdom_update') }}" id="hform-w">
+        <input type="hidden" name="username" value="{{ my_character.username }}">
+        <input type="hidden" name="password" value="{{ my_character.password }}">
+        <input type="hidden" name="increase" value="1">
+      </a>
+    </div>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -51,15 +58,20 @@
           alt="the character image"
         />
       </div>
-      <a href="{{ url_for('home') }}">
-        <div class="exit_button">
-          <img
+      <div class="small_buttom_div" style="left: 0%">
+        <form method="post" action="{{ url_for('indexx') }}" id="goob">
+          <input type="hidden" name="username" value="{{ my_character.username }}">
+          <input type="hidden" name="password" value="{{ my_character.password }}">
+          <input type="hidden" name="increase" value="0">
+          <button type="submit" class="image-button">
+            <img
             class="home-button"
             src="/procatstination/static/images/home_icon.png"
             alt="home screen"
           />
-        </div>
-      </a>
+          </button>
+        </a>
+      </div>
 
       <div class="points">Wisdom: <span id="points">0</span></div>
       <div class="timer-div">

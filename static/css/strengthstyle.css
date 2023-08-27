@@ -203,3 +203,23 @@
   transform: scale(1.3);
   transition: transform 0.3s ease-out;
         }
+
+.image-button{
+  width: 60px;
+  height: 55px;
+  top: 3%;
+  left: 2%;
+  background-color: black;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.image-button img{
+  position: relative;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}

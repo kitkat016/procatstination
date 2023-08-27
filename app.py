@@ -30,6 +30,7 @@ class User(db.Model):
 class UserForm(FlaskForm):
     username = StringField("username", validators=[DataRequired()])
     password = StringField("password", validators=[DataRequired()])
+    increase = IntegerField("increase")
 
 # Function to return a string when something is added to the database
 def __repr__(self):
@@ -121,11 +122,12 @@ def strength_update():
     character = UserForm()
     username = character.username.data
     password = character.password.data
+    increase = character.increase.data
     print(username)
     character_to_update = User.query.get_or_404(username)
     print(character_to_update)
     if request.method == "POST":
-        character_to_update.strength_stat += 1
+        character_to_update.strength_stat += increase
     try:
         db.session.commit()
         flash('Character updated successfully')

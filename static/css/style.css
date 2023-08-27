@@ -27,7 +27,7 @@
 }
 
 .small_buttom_div {
-  height: 90%;
+  height: 100%;
   width: 20%;
   position: absolute;
   border-radius: 40px;    
@@ -238,4 +238,10 @@
 .third_text:hover {
   transform: scale(1.15);
   transition: transform 0.3s ease-out;
+}
+
+.image-button{
+  border-radius: 50px;
+  background-color: #fd8a8a;
+  border-color: none;
 }
