@@ -20,35 +20,25 @@
     <div class="main_div">
       <div class="login_name">ProCATstination</div>
       <div class="login_board">
-        <div class="login_part1">
-          <label for="uname" style="font-size: 20px"><b>Username</b></label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            name="uname"
-            required
-          />
-        </div>
-        <div class="login_part2">
-          <label for="psw" style="font-size: 20px"><b>Password</b></label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            required
-          />
-        </div>
-        <div class="login_signin">
-          <!-- here link to sign-in count -->
-          <a href="{{ url_for('signup') }}" style="color: rgb(151, 65, 118)"
-            >create a new account</a
-          >
-        </div>
-        <div class="login_part3">
-          <a href="{{ url_for('home') }}">
+        <form action="{{ url_for('login') }}" method="POST">
+          {{ form.csrf_token }}
+          <div class="login_part1">
+            <label for="uname" style="font-size: 20px"><b>Username</b></label>
+            {{ form.username.label }}: {{ form.username() }}
+          </div>
+          <div class="login_part2">
+            <label for="psw" style="font-size: 20px"><b>Password</b></label>
+            {{ form.password.label }}: {{ form.password() }}
+          </div>
+          <div class="login_signin">
+            <a href="{{ url_for('signup') }}" style="color: rgb(151, 65, 118)"
+              >create a new account</a
+            >
+          </div>
+          <div class="login_part3">
             <button type="submit">Login</button>
-          </a>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </body>

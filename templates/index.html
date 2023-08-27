@@ -31,12 +31,16 @@
     <div class="main_div">
       <div class="big_buttom_div">
         <div class="small_buttom_div" style="left: 0%">
-          <a href="{{ url_for('strength') }}">
-            <img
+          <form method="post" action="{{ url_for('strength') }}">
+            <input type="hidden" name="username" value="{{ my_character.username }}">
+            <input type="hidden" name="password" value="{{ my_character.password }}">
+            <button type="submit" class="image-button">
+              <img
               src="/procatstination/static/images/strength_icon.jpg"
               alt="strength_page"
               style="width: 100%; height: 100%; border-radius: 40px"
             />
+            </button>
           </a>
         </div>
         <div class="small_buttom_div" style="left: 40%">
@@ -75,9 +79,9 @@
 
       <div class="stat">
         <div class="stat_small">
-          <div class="pie animate" style="--p: 90; --c: lightgreen">90%</div>
-          <div class="pie animate" style="--p: 90; --c: lightgreen">80%</div>
-          <div class="pie animate" style="--p: 90; --c: lightgreen">90%</div>
+          <div class="pie animate" style="--p: 90; --c: lightgreen">{{ my_character.strength_stat }}</div>
+          <div class="pie animate" style="--p: 90; --c: lightgreen">{{ my_character.intelligence_stat }}</div>
+          <div class="pie animate" style="--p: 90; --c: lightgreen">{{ my_character.wisdom_stat }}</div>
           <div class="first_text">STRENGTH</div>
           <div class="second_text">INTELLIGENCE</div>
           <div class="third_text">WISDOM</div>

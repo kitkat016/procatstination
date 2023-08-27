@@ -20,7 +20,7 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
     });
 
     let timerInterval;
-    let totalTime = 10; // 10 seconds
+    let totalTime = 1; // 10 seconds
     let isTimerRunning = false;
     let points = 0; // Initial points
 
@@ -38,7 +38,8 @@ const pointsChart = new Chart(document.getElementById('pointsChart'), {
           timerElement.textContent = '00:00'; // Show 00:00 when timer is done
           statusElement.textContent = 'Timer finished!';
           updatePoints(); // Add points when the timer finishes
-          document.querySelector('.exit_button').click(); // Click the button with class 'example'
+          // document.querySelector('.exit_button').click();
+          document.getElementById('hform').submit();// Click the button with class 'example'
           setTimeout(resetTimer, 3000); // Reset the timer after 3 seconds
       } else {
           timerElement.textContent = `00:${String(totalTime).padStart(2, '0')}`;
