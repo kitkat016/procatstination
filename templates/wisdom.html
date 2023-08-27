@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strength</title>
+    <title>Wisdom</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Lunasima&display=swap"
       rel="stylesheet"
@@ -23,7 +23,6 @@
       rel="stylesheet"
       href="/procatstination/static/css/strengthstyle.css"
     />
-    <script src="/procatstination/static/javascript/strength.js"></script>
   </head>
   <body class="background">
     <div class="main_div">
@@ -33,21 +32,24 @@
             <canvas id="pointsChart"></canvas>
             <div class="info">
               Click on the green box to start the timer! You get 10 points for
-              ever 30 minutes you workout.
+              ever 30 minutes you spend meditating.
             </div>
           </div>
         </div>
       </div>
-      <a href="{{ url_for('buffcat') }}">
+      <a href="{{ url_for('wisdomcat') }}">
         <div class="pet">
           <img
-            src="/procatstination/static/images/buff_cat.png"
-            alt="buff cat"
+            src="/procatstination/static/images/cats/cat/cat4.png"
+            alt="wisdom cat"
           />
         </div>
       </a>
       <div class="character">
-        <img src="/procatstination/static/images/girl/girl/exercise_girl.png" />
+        <img
+          src="/procatstination/static/images/girl/girl/mindful_girl.png"
+          alt="the character image"
+        />
       </div>
       <a href="{{ url_for('home') }}">
         <div class="exit_button">
@@ -59,7 +61,7 @@
         </div>
       </a>
 
-      <div class="points">Strength: <span id="points">0</span></div>
+      <div class="points">Wisdom: <span id="points">0</span></div>
       <div class="timer-div">
         <div class="timer">30:00</div>
         <div class="status">Click here to start</div>
@@ -67,7 +69,7 @@
       <div class="chart-container">
         <canvas id="pointsChart"></canvas>
       </div>
-      <div class="points">Strength: <span id="points">0</span></div>
+      <div class="points">Wisdom: <span id="points">0</span></div>
       <script src="/procatstination/static/javascript/script.js"></script>
     </div>
   </body>

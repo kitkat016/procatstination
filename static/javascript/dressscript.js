@@ -4,7 +4,7 @@ const recentClothing = localStorage.getItem("currentClothing");
     if (recentClothing) {
       characterClothing.src = recentClothing;
     } else {
-      characterClothing.src = "images/default_girl.png";
+      characterClothing.src = "/procatstination/static/images/girl/girl/default_girl.png";
     }
 
 function change_dress(clothing) {
@@ -12,4 +12,3 @@ function change_dress(clothing) {
     character_clothing.src = clothing;
     localStorage.setItem("currentClothing", clothing);
 }
-  

@@ -37,7 +37,7 @@
   flex-wrap: wrap;
 }
 
-.character {
+.cat {
   margin: auto;
   width: 30%;
   height: 60%;
@@ -46,41 +46,21 @@
   position: absolute;
 }
 
-.character:hover {
+.cat img{
+  height: 95%;
+  width: 95%;
+  left: 0%;
+  top: 20%;
+  position: absolute;
+}
+.cat:hover {
   transform: scale(1.15);
   transition: transform 0.3s ease-out;
 }
 
-#character_clothing {
+#cat_clothing {
   width: 100%;
   height: 100%;
-}
-
-
-.dress_graph {
-  background-color: antiquewhite;
-  position: relative;
-  height: 40%;
-  width: 40%;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-radius: 40px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.dress_graph img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-}
-
-.dress_graph:hover img {
-  transform: scale(1.15);
-  transition: transform 0.3s ease-out;
-  cursor: pointer;
 }
 
 .exit_button {
@@ -97,4 +77,30 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+.cat_graph {
+  background-color: antiquewhite;
+  position: relative;
+  height: 40%;
+  width: 40%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cat_graph img {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.cat_graph:hover img {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
 }
